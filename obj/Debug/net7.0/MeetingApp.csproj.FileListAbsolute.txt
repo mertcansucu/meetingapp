@@ -24,3 +24,7 @@ C:\Users\Mert Can SUCU\OneDrive - Ataturk University\Masaüstü\MeetingApp\obj\D
 C:\Users\Mert Can SUCU\OneDrive - Ataturk University\Masaüstü\MeetingApp\obj\Debug\net7.0\MeetingApp.pdb
 C:\Users\Mert Can SUCU\OneDrive - Ataturk University\Masaüstü\MeetingApp\obj\Debug\net7.0\MeetingApp.genruntimeconfig.cache
 C:\Users\Mert Can SUCU\OneDrive - Ataturk University\Masaüstü\MeetingApp\obj\Debug\net7.0\ref\MeetingApp.dll
+C:\Users\Mert Can SUCU\OneDrive - Ataturk University\Masaüstü\MeetingApp\obj\Debug\net7.0\MeetingApp.RazorAssemblyInfo.cache
+C:\Users\Mert Can SUCU\OneDrive - Ataturk University\Masaüstü\MeetingApp\obj\Debug\net7.0\MeetingApp.RazorAssemblyInfo.cs
+C:\Users\Mert Can SUCU\OneDrive - Ataturk University\Masaüstü\MeetingApp\bin\Debug\net7.0\libman.json
+C:\Users\Mert Can SUCU\OneDrive - Ataturk University\Masaüstü\MeetingApp\bin\Debug\net7.0\MeetingApp.staticwebassets.runtime.json

@@ -1,0 +1,25 @@
+<!--
+model string => viewBag ile direk göderdim
+-viewbag at işareti var
+<h1 class="h4">ViewBag.helloo, ViewBag.UserName</h1>
+-->
+<!--burda farklı bir tasarım yapmak istersem diğer sayfalardan ayrı bir layout oluşturdum onu aktif ettm veya null diyip de yapabilirim-->
+@model Meetinginfo;
+@{
+    Layout = "_Layout2";
+    ViewBag.Title = "Toplantı Başvuru";
+}
+<h1 class="h4">@ViewData["hello"], @ViewData["UserName"]</h1><!--saat bilgisine göre yazacak-->
+<p>Toplantı katılım durumunuzu bildiriniz.</p>
+<!-- link yerine tagHelper kullanarak daha dinamik bir şeklide linke gidebilirim _Viewimports.cshtml eklemeleri yaptıktan sonra
+    <a class="btn btn-sm btn-outline-primary" href="/meeting/apply">Başvuru Yap</a>
+-->
+<div class="card my-2">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Model.Location</li>
+        <li class="list-group-item">@Model.Date.ToString("dd/MM/yyyy HH:mm:ss") tarihinde gerçekleşecek</li>
+        <li class="list-group-item">@Model.NumberOfPeople Katılımcı</li>
+    </ul>
+</div>
+
+<a class="btn btn-sm btn-outline-primary" asp-controller="Meeting" asp-action="Apply">Başvuru Yap</a>
