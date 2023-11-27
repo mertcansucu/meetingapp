@@ -23,7 +23,7 @@ namespace MeetingApp.Controllers
 
             ViewData["hello"] = clock > 12 ? "İyi Günler":"Günaydın";
 
-            ViewData["UserName"]= "Mert";
+            // ViewData["UserName"]= "Mert";
 
             var meetinginfo = new Meetinginfo(){
                 Id = 1,

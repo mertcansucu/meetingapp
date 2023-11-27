@@ -1,8 +1,44 @@
+@model UserInfo
 @{
-    ViewBag.Title = "Toplantı Katılım Formu";
+    ViewBag.Title = "Başvuru Formu";
 }
-<h1 class="h4">Toplantı Katılım Formu</h1>
-<form action="">
+<h1 class="h4 text-center">Toplantı Katılım Formu</h1>
+<form method="post" action="/Meeting/Apply">
+    <div class="mb-3">
+        <!--
+            <label for="Name" class="for-label">Ad Soyad</label>
+            <input type="text" name="Name" id="Name" class="form-control">
+             burada ki for yerine taghelper metotlarını kullanıp direk bilgileri alıcam
 
+             meetngcontrollerda eklediğim post ile almak yerine taghelper kullandım
+             [HttpPost] //formdan aldığım bilgileri tekrardan alıp kullanmak için
+            public IActionResult Apply(string Name, string Phone, string Email, bool WillAttend){//toplantıya katılım formu
+            Console.WriteLine(Name);
+            Console.WriteLine(Email);
+            Console.WriteLine(Phone);
+            Console.WriteLine(WillAttend);
+            return View();
+
+        }
+
+        -->
+        <label asp-for="Name" class="for-label">Ad Soyad</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Phone" class="for-label">Telefon</label>
+        <input asp-for="Phone" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="for-label">Eposta</label>
+        <input asp-for="Email" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="WillAttend" class="for-label">Katılım Durumu</label>
+        <select asp-for="WillAttend" class="form-select">
+            <option value="true">Evet, Geliyorum</option>
+            <option value="false">Hayır, Gelmiyorum</option>
+        </select>
+    </div>
     <button class="btn btn-primary" type="submit">Kaydet</button>
 </form>
