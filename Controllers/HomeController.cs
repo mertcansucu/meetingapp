@@ -23,13 +23,15 @@ namespace MeetingApp.Controllers
 
             ViewData["hello"] = clock > 12 ? "İyi Günler":"Günaydın";
 
+            int UserCount = Repository.Users.Where(info=>info.WillAttend == true).Count(); //katılımcı sayısını eklemek için
+
             // ViewData["UserName"]= "Mert";
 
             var meetinginfo = new Meetinginfo(){
                 Id = 1,
                 Location = "İstanbul, Abc Kongre Merkezi",
                 Date = new DateTime(2024,01,20,20,0,0),
-                NumberOfPeople = 100
+                NumberOfPeople = UserCount
             };
 
             return View(meetinginfo);

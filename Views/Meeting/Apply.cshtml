@@ -3,7 +3,10 @@
     ViewBag.Title = "Başvuru Formu";
 }
 <h1 class="h4 text-center">Toplantı Katılım Formu</h1>
-<form method="post" action="/Meeting/Apply">
+<form method="post" action="/Meeting/Apply" novalidate>
+    <div asp-validation-summary="All"></div><!--Required yani eğer o alan büşsa hata mesajı için
+    css kodlarını ise wwwrootaltında css/styles.css içinde
+    -->
     <div class="mb-3">
         <!--
             <label for="Name" class="for-label">Ad Soyad</label>
@@ -36,6 +39,7 @@
     <div class="mb-3">
         <label asp-for="WillAttend" class="for-label">Katılım Durumu</label>
         <select asp-for="WillAttend" class="form-select">
+            <option value="">Seçiniz</option>
             <option value="true">Evet, Geliyorum</option>
             <option value="false">Hayır, Gelmiyorum</option>
         </select>

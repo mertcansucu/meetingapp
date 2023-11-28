@@ -11,9 +11,9 @@ namespace MeetingApp.Models
 
         //el ile bazı kayıtları yaptım
         static Repository(){
-            _users.Add(new UserInfo() {Name = "Kotan", Email = "kotan@gmail.com", Phone = "12121112" , WillAttend = true});
-            _users.Add(new UserInfo() {Name = "Selamet", Email = "selamet@gmail.com", Phone = "12121112" , WillAttend = true});
-            _users.Add(new UserInfo() {Name = "Atahan", Email = "atahan@gmail.com", Phone = "12121112" , WillAttend = false});
+            _users.Add(new UserInfo() {Id=1, Name = "Kotan", Email = "kotan@gmail.com", Phone = "12121112" , WillAttend = true});
+            _users.Add(new UserInfo() {Id=2, Name = "Selamet", Email = "selamet@gmail.com", Phone = "12121112" , WillAttend = true});
+            _users.Add(new UserInfo() {Id=3, Name = "Atahan", Email = "atahan@gmail.com", Phone = "12121112" , WillAttend = false});
         }
         
         //bilgilerin gönderilmesi
@@ -25,7 +25,13 @@ namespace MeetingApp.Models
 
         //yeni kayıtları ekleme
         public static void CreatUser(UserInfo user){
+            user.Id = Users.Count + 1 ;
             _users.Add(user);
+        }
+
+        //listeleme bölümünde detay kısmında o kişinin bilgileri görünmesi lazım bunuda o kişinin idsi ile tutabilirim
+        public static UserInfo? GetById(int id){
+            return _users.FirstOrDefault(user => user.Id == id);
         }
     }
 }

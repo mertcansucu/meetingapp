@@ -31,16 +31,28 @@ namespace MeetingApp.Controllers
         public IActionResult Apply(UserInfo model){
             //bu bilgileri burda database ya da liste ile ekleyebilirim şimfdilik bunları model içinde repositroy.cs içine aldım
 
-            Repository.CreatUser(model);
+            //Required yaparak kullanıcıya bu alan zorunlu olduğunu ve bir giriş yapmasını söylüyorum
+            if(ModelState.IsValid){
+                Repository.CreatUser(model);
 
-            //katılan kişi sayısını almak için burdan katılanların sayısını alıcam
-            ViewBag.UserCount = Repository.Users.Where(info=>info.WillAttend == true).Count();
-            return View("Thanks",model);
+                //katılan kişi sayısını almak için burdan katılanların sayısını alıcam
+                ViewBag.UserCount = Repository.Users.Where(info=>info.WillAttend == true).Count();
+                return View("Thanks",model);
+            }else{
+                return View(model);//önceki hatalı girişleri görsün diye modeli ekledim
+            }
+
+            
         }
 
         [HttpGet]
         public IActionResult List(){
-            return View();
+            return View(Repository.Users);//kayıtlı kişileri listede göstermek için ekledim
+        }
+
+        //meeting/details/id(1,2,3...)
+        public IActionResult Details(int id){
+            return View(Repository.GetById(id));
         }
     }
 }

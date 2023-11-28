@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nKAP2QAhNR/gBJhIJx50piYr8cnFcGK0oF43HIF46yw=",
+  "Hash": "ixwMNwlR7rD6kZpn01kX7nodcBzl1W9YFokc0RvJdVI=",
   "Source": "MeetingApp",
   "BasePath": "_content/MeetingApp",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Mert Can SUCU\\OneDrive - Ataturk University\\Masaüstü\\MeetingApp\\wwwroot\\css\\styles.css",
+      "SourceId": "MeetingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mert Can SUCU\\OneDrive - Ataturk University\\Masaüstü\\MeetingApp\\wwwroot\\",
+      "BasePath": "_content/MeetingApp",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    },
     {
       "Identity": "C:\\Users\\Mert Can SUCU\\OneDrive - Ataturk University\\Masaüstü\\MeetingApp\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.css",
       "SourceId": "MeetingApp",
